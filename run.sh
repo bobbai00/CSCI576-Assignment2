@@ -1,0 +1,7 @@
+srcDir="."
+cpPath="."
+dstDir="out"
+binPath="$dstDir/VertexQuantization"
+mkdir -p "$dstDir"
+javac -cp "$cpPath" -d "$dstDir" "$srcDir/ImageManipulator.java" "$srcDir/VertexQuantization.java"
+java -cp ".:$dstDir" "VertexQuantization" "$1" "$2"
